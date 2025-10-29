@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visión Artificial con Python</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .portada {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 60vh;
+            text-align: center;
+            padding: 40px 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            margin-bottom: 60px;
+        }
+
+        .portada h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            color: #d35400;
+            margin-bottom: 30px;
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
+
+        .autor-info {
+            background: linear-gradient(135deg, #ff9a56 0%, #ff6a3d 100%);
+            color: white;
+            padding: 25px 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(211, 84, 0, 0.3);
+        }
+
+        .autor-info p {
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
+            margin: 8px 0;
+            font-weight: 500;
+        }
+
+        .autor-info .nombre {
+            font-size: clamp(1.2rem, 3vw, 1.5rem);
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .catalogo {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .catalogo h2 {
+            text-align: center;
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            color: #d35400;
+            margin-bottom: 40px;
+            font-weight: 600;
+        }
+
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            padding: 20px 0;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(211, 84, 0, 0.2);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #ffb88c 0%, #de6262 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: white;
+        }
+
+        .card-content {
+            padding: 25px;
+            text-align: center;
+        }
+
+        .card-content h3 {
+            color: #d35400;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .card-content p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .numero {
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            background: #ff6a3d;
+            color: white;
+            border-radius: 50%;
+            line-height: 35px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        @media (max-width: 768px) {
+            .portada {
+                min-height: 50vh;
+                margin-bottom: 40px;
+            }
+
+            .autor-info {
+                padding: 20px 25px;
+            }
+
+            .cards-container {
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+
+            .portada {
+                padding: 30px 15px;
+            }
+
+            .cards-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="portada">
+        <h1>🐍 Visión Artificial con Python</h1>
+        <div class="autor-info">
+            <p class="nombre">Brandon Gabriel Hernández Hernández</p>
+            <p>Especialidad de IA</p>
+            <p>Cbtis 144</p>
+        </div>
+    </div>
+
+    <div class="catalogo">
+        <h2>Catálogo de Contenidos</h2>
+        <div class="cards-container">
+
+            
+            <div class="card">
+                <div class="card-image">📂</div>
+                <div class="card-content">
+                    <span class="numero">1</span>
+                    <h3>Abrir Imagen con Python</h3>
+                     <a href="abririmagen.html">link de prueba</a>
+                    <p>Aprende a cargar y visualizar imágenes utilizando bibliotecas como OpenCV y PIL</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">⚫⚪</div>
+                <div class="card-content">
+                    <span class="numero">2</span>
+                    <h3>Escala de Grises</h3>
+                    <a href="escaladegrises.html">link de prueba</a>
+                    <p>Convierte imágenes a color en escala de grises para simplificar el procesamiento</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">ℹ️</div>
+                <div class="card-content">
+                    <span class="numero">3</span>
+                    <h3>Información de Imagen</h3>
+                    <a href="informaciondeimagen.html">link de prueba</a>
+                    <p>Extrae metadatos como dimensiones, formato, canales de color y tipo de datos</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">📏</div>
+                <div class="card-content">
+                    <span class="numero">4</span>
+                    <h3>Ajustar Tamaño</h3>
+                    <a href="ajustartamaño.html">link de prueba</a>
+                    <p>Redimensiona imágenes manteniendo la calidad y proporción adecuadas</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">🎯</div>
+                <div class="card-content">
+                    <span class="numero">5</span>
+                    <h3>Coordenadas</h3>
+                     <a href="coodenadas.html.">link de prueba</a>
+                    <p>Aprende a recortar imágenes utilizando coordenadas y slicing de arrays</p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+                <div class="card-image">🎯</div>
+                <div class="card-content">
+                    <span class="numero">6</span>
+                    <h3>Movimientos</h3>
+                     <a href="movientos.html">link de prueba</a>
+                    <p>Rotacion de la imagen en diferentes direcciones</p>
+                </div>
+        </div>
+    </section>
+    </div>
+</body>
+</html>
